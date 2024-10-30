@@ -43,4 +43,3 @@ public class ParcialTest {
         assertEquals("La ecuación no tiene raíces reales.", exception.getMessage());
     }
 }
-
