@@ -6,12 +6,12 @@ import org.junit.jupiter.api.Test;
 import logica.Parcial;
 public class ParcialTest {
 
-    // Instancia de la clase a probar
+ 
     Parcial parcial = new Parcial();
 
     @Test
     public void testRaicesReales() {
-        // Prueba para valores con raíces reales
+        // Hay 2 raíces reales
         double[] resultado = parcial.calcularRaices(1, -3, 2);
         assertEquals(2.0, resultado[0], 0.0001);
         assertEquals(1.0, resultado[1], 0.0001);
@@ -19,7 +19,7 @@ public class ParcialTest {
 
     @Test
     public void testRaicesIguales() {
-        // Prueba para valores con una única raíz real (discriminante cero)
+        // Hay una única raíz real 
         double[] resultado = parcial.calcularRaices(1, -2, 1);
         assertEquals(1.0, resultado[0], 0.0001);
         assertEquals(1.0, resultado[1], 0.0001);
@@ -27,7 +27,7 @@ public class ParcialTest {
 
     @Test
     public void testExcepcionAEsCero() {
-        // Prueba para verificar la excepción cuando 'a' es cero
+        // cuando a vale cero se lanza una excepcion
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             parcial.calcularRaices(0, 2, 1);
         });
@@ -36,7 +36,7 @@ public class ParcialTest {
 
     @Test
     public void testExcepcionRaicesComplejas() {
-        // Prueba para verificar la excepción cuando el discriminante es negativo
+        // si el discriminante es negativo, se lanza una excepcion
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             parcial.calcularRaices(1, 1, 1);
         });
