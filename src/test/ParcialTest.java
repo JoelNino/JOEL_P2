@@ -13,16 +13,16 @@ public class ParcialTest {
     public void testRaicesReales() {
         // Hay 2 raíces reales
         double[] resultado = parcial.calcularRaices(1, -3, 2);
-        assertEquals(2.0, resultado[0], 0.0001);
-        assertEquals(1.0, resultado[1], 0.0001);
+        assertEquals(2.0, resultado[0]);
+        assertEquals(1.0, resultado[1]);
     }
 
     @Test
     public void testRaicesIguales() {
         // Hay una única raíz real 
         double[] resultado = parcial.calcularRaices(1, -2, 1);
-        assertEquals(1.0, resultado[0], 0.0001);
-        assertEquals(1.0, resultado[1], 0.0001);
+        assertEquals(1.0, resultado[0]);
+        assertEquals(1.0, resultado[1]);
     }
 
     @Test
